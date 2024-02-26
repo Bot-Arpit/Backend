@@ -21,10 +21,10 @@ describe('Backend_SC_01', () => {
 
     cy.get('@singleUser').then((response) => { //calling response of APi by using @ followed by alias
       expect(response.status).equal(200)
-      expect(response.body.data.id).eq(2)
-      expect(response.body.data.email).eq("janet.weaver@reqres.in")
-      expect(response.body.data.first_name).eq("Janet")
-      expect(response.body.data.last_name).eq("Weaver")
+      expect(response.body.data.id).eq(2) //verifying id
+      expect(response.body.data.email).eq("janet.weaver@reqres.in") //verifying email
+      expect(response.body.data.first_name).eq("Janet") //verifying first-name
+      expect(response.body.data.last_name).eq("Weaver") //verifying last-name
       
     })
   })
